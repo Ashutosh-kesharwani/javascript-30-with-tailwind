@@ -18,3 +18,13 @@
 
   filter: brightness(1.12);
 }
+
+/* Prevent text selection, tap highlight, and unwanted touch gestures on mobile */
+
+.keys {
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
