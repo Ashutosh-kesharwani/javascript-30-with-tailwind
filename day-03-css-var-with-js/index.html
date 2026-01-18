@@ -1,17 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 3 | Css Var with Js</title>
-    <link rel="stylesheet" href="../tailwind-setup/output.css">
-</head>
-<body >
- <main class="bg-slate-900 h-screen w-full">
-    
- </main>
-    
-<script src="script.js"></script>
-</body>
-</html>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 3 | Css Var with Js</title>
+
+  <link rel="stylesheet" href="../tailwind-setup/output.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <main class="
+    h-screen w-full  flex flex-col text-[rgb(var(--text-primary-color))]" style="
+    background: linear-gradient(
+      to bottom right,
+      rgb(var(--bg-from)),
+      rgb(var(--bg-via)),
+      rgb(var(--bg-to))
+    );
+  ">
+
+    <!-- NAV -->
+    <nav class="pl-2 pr-8 flex justify-between items-center border-b border-white/10  bg-[linear-gradient(to_bottom_right,
+      rgb(var(--bg-from)),
+      rgb(var(--bg-via)),
+      rgb(var(--bg-to))
+    )]">
+      <div id="nav-left" class="w-64 border-r border-white/10 py-2">
+        <div id="logo-container" class="w-60 overflow-hidden">
+          <img src="logo.png" alt="logo" class="h-full w-full object-cover" />
+        </div>
+      </div>
+
+      <div id="nav-center" class="w-200">
+        <h1 class="text-4xl text-center font-bold uppercase tracking-widest whitespace-nowrap">
+          User Preferences Dashboard
+        </h1>
+      </div>
+
+      <div id="nav-right">
+        <div id="image-container" class="h-9 w-9 overflow-hidden ring-2 ring-white/20 rounded-full">
+          <img src="profile-pic.jpg" alt="profile-picture" class="h-full w-full object-cover rounded-full" />
+        </div>
+      </div>
+    </nav>
+
+    <div id="content" class="w-full flex-1 flex">
+
+      <!-- SIDEBAR -->
+      <aside id="sidebar" class="h-full w-80 pl-2 border-r border-white/10  bg-[linear-gradient(to_bottom_right,
+      rgb(var(--bg-from)),
+      rgb(var(--bg-via)),
+      rgb(var(--bg-to))
+    )] ">
+        <div id="options-container" class="h-1/2 pt-6 pr-1 cursor-pointer space-y-1">
+
+          <div id="options"
+            class="h-1/4 pl-3 rounded-xl hover:bg-white/10 transition-all duration-300 flex gap-3 items-center text-2xl">
+            <i class="ri-home-4-line"></i>
+            <a href="#" class="font-semibold capitalize">Home</a>
+          </div>
+
+          <div id="options"
+            class="h-1/4 pl-3 rounded-xl hover:bg-white/10 transition-all duration-300 flex gap-3 items-center text-2xl">
+            <i class="ri-paint-brush-line"></i>
+            <a href="#" class="font-semibold capitalize">Appearance</a>
+          </div>
+
+          <div id="options"
+            class="h-1/4 pl-3 rounded-xl hover:bg-white/10 transition-all duration-300 flex gap-3 items-center text-2xl">
+            <i class="ri-wheelchair-line"></i>
+            <a href="#" class="font-semibold capitalize">Accessibility</a>
+          </div>
+
+          <div id="options"
+            class="h-1/4 pl-3 rounded-xl hover:bg-white/10 transition-all duration-300 flex gap-3 items-center text-2xl">
+            <i class="ri-settings-3-line"></i>
+            <a href="#" class="font-semibold capitalize">Preferences</a>
+          </div>
+
+        </div>
+
+        <div id="logout" class="h-1/2 flex items-center text-2xl gap-3 pl-3 text-red-400">
+          <i class="ri-logout-box-r-line"></i>
+          <span class="font-semibold capitalize">Logout</span>
+        </div>
+      </aside>
+
+      <!-- CENTER -->
+      <div id="center" class="w-full h-full py-6 px-6 flex gap-3 flex-col">
+
+        <!-- HERO CARD -->
+        <div class="card h-[25vh] w-full rounded-3xl flex overflow-hidden
+                    bg-white/5 border border-white/10 shadow-xl">
+
+          <div id="text-1" class="w-[50%] flex items-center pl-8">
+            <span class="text-9xl font-extrabold uppercase tracking-widest">Day</span>
+            <span class="outline-text text-7xl font-bold mt-10 uppercase">03</span>
+          </div>
+
+          <div id="text-2" class="w-[50%] flex justify-center items-center">
+            <span class="text-9xl font-extrabold uppercase tracking-widest">T</span>
+            <span class="outline-text text-7xl font-bold mt-10 uppercase">heme</span>
+            <span class="text-9xl font-extrabold uppercase tracking-widest ml-4">C</span>
+            <span class="outline-text text-7xl font-bold mt-10 uppercase">raft</span>
+          </div>
+        </div>
+
+        <!-- ACCESSIBILITY -->
+        <div class="card  w-full rounded-3xl  bg-[linear-gradient(to_bottom_right,
+      rgb(var(--bg-from)),
+      rgb(var(--bg-via)),
+      rgb(var(--bg-to))
+    )]   
+                    pt-4 px-4 flex flex-col border border-white/10 shadow-lg">
+
+          <h2 class="text-3xl font-semibold pb-2 mb-2 border-b border-white/10">
+            Accessibility
+          </h2>
+
+          <div id="appearance-container" class="w-full h-full pb-2 flex gap-3">
+
+            <div id="font-size-container" class=" bg-[linear-gradient(to_bottom_right,
+      rgb(var(--bg-from)),
+      rgb(var(--bg-via)),
+      rgb(var(--bg-to))
+    )]   w-1/2 h-full rounded-2xl flex overflow-hidden border border-white/10">
+              <div class="w-[60%] h-full flex flex-col justify-center gap-5 pl-4 pr-4">
+                <h2 class="text-2xl font-semibold text-primary">Font Size</h2>
+                <div class="flex items-center gap-5">
+                  <input type="range" min="10" max="25" value="18" class=" font-size-range
+    w-full
+    h-1.5
+    rounded-full
+    appearance-none
+    cursor-pointer
+   
+    /* track */
+    bg-white/20
+
+   
+    focus:outline-none
+  " />
+
+ 
+
+
+                  <span class="font-size-value text-xl font-bold whitespace-nowrap">18 px</span>
+                </div>
+              </div>
+              <div class="w-[40%] flex justify-center items-center">
+                <span class="--font-size-base font-bold tracking-wider text-primary">A a</span>
+              </div>
+            </div>
+
+            <div id="font-style-container" class=" bg-[linear-gradient(to_bottom_right,
+      rgb(var(--bg-from)),
+      rgb(var(--bg-via)),
+      rgb(var(--bg-to))
+    )]    w-1/2 h-full rounded-2xl flex overflow-hidden border border-white/10">
+              <div class="w-1/2 flex justify-center items-center">
+                <span class="text-8xl font-bold tracking-wider text-primary">T</span>
+              </div>
+              <div class="w-1/2 flex flex-col justify-center pr-10 gap-5 items-start pb-3 pt-1">
+                <h2 class="text-2xl font-semibold text-primary">Font Style</h2>
+                <div class="relative w-full">
+                  <select class="
+                  font-family-select
+                  w-full
+           bg-white/10 backdrop-blur-xl
+           text-primary
+           px-4 py-2 pr-10
+           font-semibold tracking-wide
+           rounded-xl
+           border border-white/20
+           shadow-lg shadow-black/30
+           focus:outline-none
+           focus:ring-2 focus:ring-sky-950/70
+           focus:border-sky-400/70
+           appearance-none
+           transition-all duration-300
+
+           /* dropdown theme */
+           [&>option]:bg-slate-900
+           [&>option]:text-primary
+           [&>option]:font-semibold">
+
+                    
+            
+  <option value="Gilroy, sans-serif">Gilroy</option>
+  <option value="Arial, sans-serif">Arial</option>
+  <option value="sans-serif">Sans Serif</option>
+  <option value="'Neue Machina', sans-serif">Neue Machina</option>
+  <option value="'Rapp', cursive">Rapp</option>
+</select>
+
+
+                  <!-- custom arrow -->
+                  <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2
+           text-primary/70">
+                    <i class="ri-arrow-down-s-line text-xl"></i>
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- APPEARANCE -->
+        <div class="card  w-full rounded-3xl flex overflow-hidden
+                    bg-white/5 border border-white/10 shadow-lg ">
+
+          <div id="mode-switcher" class="w-1/2 relative">
+            <img src="theme-mode.png" alt="theme" class="h-full w-full object-cover">
+            <div class="absolute bottom-2 left-[40%]">
+              <button id="themeToggle" class=" w-16 h-8 bg-slate-500/70 rounded-full relative">
+                <span class="absolute top-1 left-1 w-6 h-6 bg-white rounded-full"></span>
+              </button>
+            </div>
+          </div>
+
+          <div id="color-switcher" class="pl-10">
+            <h2 class="text-3xl font-semibold pb-2 mb-4 border-b border-white/10">Appearance</h2>
+            <!-- color blocks  -->
+
+            <div class="flex flex-col gap-8">
+
+              <!-- LIGHT MODE FONT COLORS -->
+              <div class="light-mode block">
+                <h3 class="text-xl font-semibold mb-5 text-primary">
+                  Light Mode Font Colors
+                </h3>
+
+                <div id="light-mode-color-set" class=" flex gap-4 flex-wrap border p-2 rounded-2xl">
+
+                  <!-- Charcoal -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#1f2933] flex items-center justify-center ring-2 ring-transparent peer-checked:ring-white transition"
+                      data-rgb="31 41 51">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Slate Ink -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#334155] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="51 65 85">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Terracotta -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#c2410c] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="194 65 12">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Warm Sand -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#b08968] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="176 137 104">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Olive -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#3f6212] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="63 98 18">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Deep Teal -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#115e59] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="17 94 89">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Indigo Smoke -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#3730a3] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="55 48 163">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Cocoa -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#4a2c2a] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="74 44 42">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Wine -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#7f1d1d] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="127 29 29">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Forest -->
+                  <label class="color-option cursor-pointer">
+                    <input type="checkbox" class="peer hidden">
+                    <span
+                      class="w-10 h-10 rounded-full bg-[#064e3b] ring-2 ring-transparent peer-checked:ring-white transition flex items-center justify-center"
+                      data-rgb="6 78 59">
+                      <i class="ri-check-line text-primary opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- DARK MODE FONT COLORS -->
+              <div class="dark-mode hidden">
+                <h3 class="text-xl font-semibold mb-5 text-primary">
+                  Dark Mode Font Colors
+                </h3>
+
+                <div class=" flex gap-4 flex-wrap border p-2 rounded-2xl">
+
+                  <!-- Soft White -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#e5e7eb]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="229 231 235">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Sky Glow -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#7dd3fc]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="125 211 252">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Mint -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#6ee7b7]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="110 231 183">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Aqua -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#67e8f9]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="103 232 249">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Lavender -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#c4b5fd]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="196 181 253">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Rose Soft -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#fda4af]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="253 164 175">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Amber Glow -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#fcd34d]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="252 211 77">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Peach -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#fdba74]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="253 186 116">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Lime Soft -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#bef264]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="190 242 100">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                  <!-- Cyan Ice -->
+                  <label class="color-option cursor-pointer">
+                    <input type="radio" name="font-color" class="peer hidden">
+                    <span class="w-10 h-10 rounded-full bg-[#67e8f9]
+        ring-2 ring-transparent peer-checked:ring-white
+        flex items-center justify-center transition" data-rgb="103 232 249">
+                      <i class="ri-check-line text-black opacity-0 peer-checked:opacity-100"></i>
+                    </span>
+                  </label>
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
