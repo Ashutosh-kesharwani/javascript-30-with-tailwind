@@ -57,14 +57,14 @@ document.addEventListener("click", (e) => {
   // Apply color globally
   root.style.setProperty("--text-primary-color", rgbValue);
 
-  // Remove previous active state
+  // Remove previous active state i.e the color which is previously selcted now check mark appear on it so on selecting other , we have to remove check mark from that one 
   document
     .querySelectorAll(".color-option")
     .forEach((el) => {
       el.querySelector("i")?.classList.add("opacity-0");
     });
 
-  // Show tick on selected
+  // Show tick on selected [here show tick on selected ]
   const checkIcon = colorBox.querySelector("i");
   if (checkIcon) checkIcon.classList.remove("opacity-0");
 });
