@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 04 | Flex Panel</title>
+    <link rel="stylesheet" href="../tailwind-setup/output.css" />
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
+
+    <style>
+      .panel {
+        transition:
+          font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+          flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+      }
+      .panel img {
+        object-position: center;
+        transition: object-position 0.7s ease;
+      }
+
+      .panel.open img {
+        object-position: top;
+      }
+
+      .panel .text p {
+        transition: transform 0.5s ease;
+      }
+
+      .panel .text p:first-child {
+        transform: translateY(-100%);
+      }
+
+      .panel .text p:last-child {
+        transform: translateY(100%);
+      }
+
+      .panel.open-active .text p:first-child,
+      .panel.open-active .text p:last-child {
+        transform: translateY(0);
+      }
+
+      .panel.open {
+        flex: 5;
+      }
+
+      .panel.open .mid-name {
+        font-size: 80px;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <main
+      class="font-['Gilroy',sans-serif] h-screen w-full bg-amber-900 overflow-hidden"
+    >
+      <div class="panels h-full w-full flex">
+        <!-- Panel-1 -->
+        <div
+          class="panel flex-1 flex justify-center items-center relative overflow-hidden bg-red-500"
+          id="panel-1"
+        >
+         
+
+          <img
+            class="h-full w-full object-cover object-top relative z-10"
+            src="assets/Nami.png"
+            alt="Nami"
+          />
+
+          <div
+            class="text absolute z-30 flex flex-col items-center h-full w-full"
+          >
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center transform "
+            >
+              Storm
+            </p>
+
+            <p
+              class="mid-name text-6xl font-extrabold uppercase  text-black/90 flex-1 flex justify-center items-center"
+            >
+              Nami
+            </p>
+
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Navigator
+            </p>
+          </div>
+        </div>
+        <!-- Panel-2 -->
+        <div
+          class="panel flex-1 flex justify-center items-center relative overflow-hidden bg-red-500"
+          id="panel-2"
+        >
+         
+          <img
+            class="h-full w-full object-cover object-top relative z-10"
+            src="assets/zoro.png"
+            alt="zoro"
+          />
+
+          <div
+            class="text absolute z-30 flex flex-col items-center h-full w-full"
+          >
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Resolve
+            </p>
+
+            <p
+              class="text-6xl font-extrabold uppercase  text-black/90 flex-1 flex justify-center items-center"
+            >
+              Zoro
+            </p>
+
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Demon
+            </p>
+          </div>
+        </div>
+
+        <!-- Panel-3 -->
+        <div
+          class="panel flex-1 flex justify-center items-center relative overflow-hidden bg-red-500"
+          id="panel-3"
+        >
+         
+          <img
+            class="h-full w-full object-cover object-top relative z-10"
+            src="assets/Luffy.png"
+            alt="luffy"
+          />
+
+          <div
+            class="text absolute z-30 flex flex-col items-center h-full w-full"
+          >
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Fearless
+            </p>
+
+            <p
+              class="text-6xl font-extrabold uppercase  text-black/90 flex-1 flex justify-center items-center"
+            >
+              Luffy
+            </p>
+
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Freedom
+            </p>
+          </div>
+        </div>
+
+        <!-- Panel-4 -->
+        <div
+          class="panel flex-1 flex justify-center items-center relative overflow-hidden bg-red-500"
+          id="panel-4"
+        >
+         
+          <img
+            class="h-full w-full object-cover object-top relative z-10"
+            src="assets/Sanji.png"
+            alt="sanji"
+          />
+
+          <div
+            class="text absolute z-30 flex flex-col items-center h-full w-full"
+          >
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Passion
+            </p>
+
+            <p
+              class="text-6xl font-extrabold uppercase  text-black/90 flex-1 flex justify-center items-center"
+            >
+              Sanji
+            </p>
+
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Flame
+            </p>
+          </div>
+        </div>
+
+        <!-- Panel-5 -->
+        <div
+          class="panel flex-1 flex justify-center items-center relative overflow-hidden bg-red-500"
+          id="panel-5"
+        >
+         
+          <img
+            class="h-full w-full object-cover object-top relative z-10"
+            src="assets/Robin.png"
+            alt="robin"
+          />
+
+          <div
+            class="text absolute z-30 flex flex-col items-center h-full w-full"
+          >
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Silence
+            </p>
+
+            <p
+              class="text-6xl font-extrabold uppercase  text-black/90 flex-1 flex justify-center items-center"
+            >
+              Robin
+            </p>
+
+            <p
+              class="text-6xl font-extrabold text-white flex-1 flex justify-center items-center"
+            >
+              Scholar
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const panels = document.querySelectorAll(".panel");
+
+      function toggleOpen() {
+        // Close all other panels first
+        panels.forEach((panel) => {
+          if (panel !== this) {
+            panel.classList.remove("open", "open-active");
+          }
+        });
+
+        // Toggle current panel
+        this.classList.toggle("open");
+
+        // Handle transition end only once
+        this.addEventListener("transitionend", function handler(e) {
+          if (e.propertyName.includes("flex")) {
+            this.classList.toggle("open-active");
+            this.removeEventListener("transitionend", handler);
+          }
+        });
+      }
+
+      // Attach only click listeners
+      panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
+    </script>
+  </body>
+</html>
